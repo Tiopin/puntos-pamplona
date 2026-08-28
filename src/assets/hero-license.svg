@@ -1,0 +1,41 @@
+<svg viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <g transform="rotate(-6 190 150)">
+    <rect x="50" y="67" width="300" height="190" rx="22" fill="#0a1f44" opacity="0.06"/>
+
+    <rect x="40" y="55" width="300" height="190" rx="22" fill="#ffffff" stroke="#0a1f44" stroke-width="3"/>
+
+    <rect x="60" y="68" width="42" height="30" rx="6" fill="#0a1f44"/>
+    <text x="81" y="88" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#ffffff">UE</text>
+    <text x="114" y="89" font-family="system-ui, sans-serif" font-size="16" font-weight="700" letter-spacing="1" fill="#0a1f44">PERMISO DE CONDUCIR</text>
+    <rect x="60" y="110" width="250" height="2" fill="#e5e4e7"/>
+
+    <rect x="60" y="122" width="78" height="68" rx="10" fill="#eaf0ff" stroke="#1554f5" stroke-width="1.5"/>
+    <circle cx="99" cy="150" r="15" fill="#0a1f44"/>
+    <path d="M68 190 Q99 162 130 190 Z" fill="#0a1f44"/>
+
+    <rect x="156" y="128" width="60" height="10" rx="5" fill="#0a1f44"/>
+    <rect x="156" y="148" width="56" height="8" rx="4" fill="#c7d5f7"/>
+    <rect x="156" y="164" width="50" height="8" rx="4" fill="#c7d5f7"/>
+    <rect x="156" y="180" width="56" height="8" rx="4" fill="#c7d5f7"/>
+
+    <g transform="translate(224 112)">
+      <path d="M20 28 Q24 0 50 0 H66 Q84 0 90 28 Z" fill="#1554f5"/>
+      <rect x="0" y="28" width="110" height="34" rx="17" fill="#1554f5"/>
+      <polygon points="32,6 64,6 70,26 26,26" fill="#eaf0ff"/>
+      <circle cx="22" cy="64" r="14" fill="#0a1f44"/>
+      <circle cx="22" cy="64" r="6" fill="#ffffff"/>
+      <circle cx="88" cy="64" r="14" fill="#0a1f44"/>
+      <circle cx="88" cy="64" r="6" fill="#ffffff"/>
+      <circle cx="106" cy="40" r="5" fill="#eaf0ff" stroke="#0a1f44" stroke-width="1.5"/>
+    </g>
+
+    <text x="60" y="220" font-family="system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5" fill="#0a1f44">PUNTOS</text>
+    <circle cx="76" cy="234" r="12" fill="#1554f5"/>
+    <circle cx="106" cy="234" r="12" fill="#1554f5"/>
+    <circle cx="136" cy="234" r="12" fill="#1554f5"/>
+    <circle cx="166" cy="234" r="12" fill="#eaf0ff" stroke="#1554f5" stroke-width="2"/>
+    <circle cx="196" cy="234" r="12" fill="#eaf0ff" stroke="#1554f5" stroke-width="2"/>
+
+    <path d="M240 234 q10 -14 20 0 t20 0 t20 -10 t20 6" stroke="#0a1f44" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
