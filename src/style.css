@@ -297,7 +297,30 @@ img {
   text-decoration: none;
 }
 
+.course-information-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 12px 18px;
+  border: 1px solid rgba(10, 31, 68, 0.08);
+  border-radius: 12px;
+  color: var(--navy);
+  background: var(--blue-light);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+}
+
 .course-information-links a span {
+  flex: 0 0 auto;
+  color: var(--blue);
+  font-size: 20px;
+}
+
+.course-information-trigger > span {
   flex: 0 0 auto;
   color: var(--blue);
   font-size: 20px;
@@ -315,9 +338,112 @@ img {
   text-align: right;
 }
 
+.course-information-trigger .course-link-note {
+  flex: 1 1 auto;
+  min-width: 100px;
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.3;
+  font-style: italic;
+  font-weight: 400;
+  text-align: right;
+}
+
 .course-information-links a:focus-visible {
   outline: 2px solid var(--blue);
   outline-offset: 2px;
+}
+
+.course-information-trigger:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.course-information-item.is-open .course-information-trigger {
+  border-radius: 12px 12px 0 0;
+}
+
+.course-information-content {
+  padding: 24px 18px;
+  border: 1px solid rgba(10, 31, 68, 0.08);
+  border-top: 0;
+  border-radius: 0 0 12px 12px;
+  color: var(--text);
+  background: #f7f9ff;
+}
+
+.course-information-content[hidden] {
+  display: none;
+}
+
+.course-information-content p {
+  margin: 0;
+}
+
+.course-information-content p + p {
+  margin-top: 12px;
+}
+
+.course-information-lead {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.course-information-details {
+  display: grid;
+  gap: 6px;
+  margin: 20px 0;
+}
+
+.course-information-details div {
+  display: flex;
+  gap: 5px;
+}
+
+.course-information-details dt {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.course-information-details dd {
+  margin: 0;
+}
+
+.course-information-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.course-information-actions .cta-button {
+  padding: 12px 20px;
+  font-size: 13px;
+}
+
+.course-information-actions .cta-button:first-child {
+  color: #fff;
+  background: var(--blue);
+}
+
+.course-information-whatsapp {
+  color: var(--blue);
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--blue);
+}
+
+.course-information-official {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.course-information-official span {
+  color: inherit;
+  font-size: inherit;
 }
 
 .contact-block {

@@ -76,12 +76,116 @@ document.querySelector('#app').innerHTML = `
     <h2 id="course-information-title">INFORMACIÓN SOBRE LOS CURSOS</h2>
     <nav aria-label="Información oficial sobre los cursos">
       <ul class="course-information-links">
-        <li><a href="https://www.dgt.es/nuestros-servicios/permisos-de-conducir/tus-puntos-y-tus-permisos/recupera-tus-puntos/" target="_blank" rel="noopener noreferrer">Recuperación parcial de puntos <span class="course-link-note">Hasta 4 puntos, sin examen</span><span aria-hidden="true">→</span></a></li>
-        <li><a href="https://www.dgt.es/nuestros-servicios/permisos-de-conducir/tus-puntos-y-tus-permisos/recupera-tus-puntos/" target="_blank" rel="noopener noreferrer">Recuperación del permiso <span class="course-link-note">Curso completo + examen</span><span aria-hidden="true">→</span></a></li>
-        <li><a href="https://www.dgt.es/nuestros-servicios/permisos-de-conducir/tus-puntos-y-tus-permisos/recupera-tus-puntos/" target="_blank" rel="noopener noreferrer">Retirada judicial del permiso <span class="course-link-note">SIN EXAMEN</span><span aria-hidden="true">→</span></a></li>
-        <li><a href="https://www.boe.es/eli/es/o/2024/09/02/int914/con" target="_blank" rel="noopener noreferrer">Duración y contenido de los cursos <span class="course-link-note">PARCIAL 10 H · TOTAL 20 H</span><span aria-hidden="true">→</span></a></li>
-        <li><a href="https://www.dgt.es/nuestros-servicios/permisos-de-conducir/tus-puntos-y-tus-permisos/recupera-tus-puntos/" target="_blank" rel="noopener noreferrer">Exámenes y pruebas <span class="course-link-note">Gestiona el CENTRO</span><span aria-hidden="true">→</span></a></li>
-        <li><a href="https://www.boe.es/eli/es/o/2024/09/02/int914/con" target="_blank" rel="noopener noreferrer">Normativa oficial <span class="course-link-note">DGT · BOE</span><span aria-hidden="true">→</span></a></li>
+        <li class="course-information-item">
+          <button class="course-information-trigger" type="button" aria-expanded="false" aria-controls="partial-recovery-content">
+            Recuperación parcial de puntos <span class="course-link-note">Hasta 4 puntos, sin examen</span><span class="course-information-toggle" aria-hidden="true">+</span>
+          </button>
+          <div class="course-information-content" id="partial-recovery-content" hidden>
+            <p class="course-information-lead">¿Todavía conservas tu permiso de conducir pero has perdido puntos?</p>
+            <p>Puedes realizar un curso de recuperación parcial para recuperar hasta 4 puntos, sin necesidad de realizar examen.</p>
+            <dl class="course-information-details">
+              <div><dt>Duración:</dt><dd>10 horas</dd></div>
+              <div><dt>Precio:</dt><dd>215 €</dd></div>
+              <div><dt>Examen:</dt><dd>No</dd></div>
+            </dl>
+            <div class="course-information-actions">
+              <a class="cta-button" href="https://puntosnavarra.com/">PRÓXIMOS CURSOS</a>
+              <a class="cta-button course-information-whatsapp" href="https://wa.me/34649230920">CONSULTAR POR WHATSAPP</a>
+            </div>
+            <a class="course-information-official" href="https://www.dgt.es/nuestros-servicios/permisos-de-conducir/tus-puntos-y-tus-permisos/recupera-tus-puntos/" target="_blank" rel="noopener noreferrer">Más información oficial en la DGT <span aria-hidden="true">→</span></a>
+          </div>
+        </li>
+        <li class="course-information-item">
+          <button class="course-information-trigger" type="button" aria-expanded="false" aria-controls="permit-recovery-content">
+            Recuperación del permiso <span class="course-link-note">Curso completo + examen</span><span class="course-information-toggle" aria-hidden="true">+</span>
+          </button>
+          <div class="course-information-content" id="permit-recovery-content" hidden>
+            <p class="course-information-lead">¿Has perdido todos los puntos y ya no tienes vigente tu permiso de conducir?</p>
+            <p>Para volver a conducir deberás realizar el curso de recuperación del permiso y superar posteriormente la prueba correspondiente.</p>
+            <dl class="course-information-details">
+              <div><dt>Duración:</dt><dd>20 horas</dd></div>
+              <div><dt>Precio:</dt><dd>405 €</dd></div>
+              <div><dt>Examen:</dt><dd>Sí</dd></div>
+            </dl>
+            <div class="course-information-actions">
+              <a class="cta-button" href="https://puntosnavarra.com/">PRÓXIMOS CURSOS</a>
+              <a class="cta-button course-information-whatsapp" href="https://wa.me/34649230920">CONSULTAR POR WHATSAPP</a>
+            </div>
+            <a class="course-information-official" href="https://www.dgt.es/nuestros-servicios/permisos-de-conducir/tus-puntos-y-tus-permisos/recupera-tus-puntos/" target="_blank" rel="noopener noreferrer">Más información oficial en la DGT <span aria-hidden="true">→</span></a>
+          </div>
+        </li>
+        <li class="course-information-item">
+          <button class="course-information-trigger" type="button" aria-expanded="false" aria-controls="judicial-withdrawal-content">
+            Retirada judicial del permiso <span class="course-link-note">SIN EXAMEN</span><span class="course-information-toggle" aria-hidden="true">+</span>
+          </button>
+          <div class="course-information-content" id="judicial-withdrawal-content" hidden>
+            <p class="course-information-lead">¿Te han retirado el permiso de conducir por sentencia judicial?</p>
+            <p>Debes realizar un curso de sensibilización y reeducación vial de 20 horas.</p>
+            <p>Retirada de hasta 2 años: sin examen.</p>
+            <p>Retirada superior a 2 años: con examen.</p>
+            <dl class="course-information-details">
+              <div><dt>Duración:</dt><dd>20 horas</dd></div>
+            </dl>
+            <div class="course-information-actions">
+              <a class="cta-button" href="https://puntosnavarra.com/">PRÓXIMOS CURSOS</a>
+              <a class="cta-button course-information-whatsapp" href="https://wa.me/34649230920">CONSULTAR POR WHATSAPP</a>
+            </div>
+            <a class="course-information-official" href="https://www.dgt.es/nuestros-servicios/permisos-de-conducir/tus-puntos-y-tus-permisos/recupera-tus-puntos/" target="_blank" rel="noopener noreferrer">Más información oficial en la DGT <span aria-hidden="true">→</span></a>
+          </div>
+        </li>
+        <li class="course-information-item">
+          <button class="course-information-trigger" type="button" aria-expanded="false" aria-controls="course-duration-content">
+            Duración y contenido de los cursos <span class="course-link-note">PARCIAL 10 H · TOTAL 20 H</span><span class="course-information-toggle" aria-hidden="true">+</span>
+          </button>
+          <div class="course-information-content" id="course-duration-content" hidden>
+            <p class="course-information-lead">Los cursos combinan formación común sobre seguridad vial con contenidos adaptados a cada conductor.</p>
+            <dl class="course-information-details">
+              <div><dt>Recuperación parcial:</dt><dd>10 horas</dd></div>
+              <div><dt>Recuperación del permiso:</dt><dd>20 horas</dd></div>
+            </dl>
+            <p>La formación incluye contenidos sobre seguridad vial, conducción responsable y sensibilización para prevenir nuevas pérdidas de puntos.</p>
+            <div class="course-information-actions">
+              <a class="cta-button" href="https://puntosnavarra.com/">PRÓXIMOS CURSOS</a>
+              <a class="cta-button course-information-whatsapp" href="https://wa.me/34649230920">CONSULTAR POR WHATSAPP</a>
+            </div>
+            <a class="course-information-official" href="https://www.boe.es/eli/es/o/2024/09/02/int914/con" target="_blank" rel="noopener noreferrer">Consultar normativa oficial en el BOE <span aria-hidden="true">→</span></a>
+          </div>
+        </li>
+        <li class="course-information-item">
+          <button class="course-information-trigger" type="button" aria-expanded="false" aria-controls="exams-content">
+            Exámenes y pruebas <span class="course-link-note">Gestiona el CENTRO</span><span class="course-information-toggle" aria-hidden="true">+</span>
+          </button>
+          <div class="course-information-content" id="exams-content" hidden>
+            <p class="course-information-lead">No todos los cursos de recuperación requieren examen.</p>
+            <dl class="course-information-details">
+              <div><dt>Recuperación parcial de puntos:</dt><dd>sin examen.</dd></div>
+              <div><dt>Recuperación del permiso:</dt><dd>con examen.</dd></div>
+              <div><dt>Retirada judicial hasta 2 años:</dt><dd>sin examen.</dd></div>
+              <div><dt>Retirada judicial superior a 2 años:</dt><dd>con examen.</dd></div>
+            </dl>
+            <p>Cuando sea necesario realizar examen, el centro te informará y gestionará los pasos correspondientes.</p>
+            <div class="course-information-actions">
+              <a class="cta-button" href="https://puntosnavarra.com/">PRÓXIMOS CURSOS</a>
+              <a class="cta-button course-information-whatsapp" href="https://wa.me/34649230920">CONSULTAR POR WHATSAPP</a>
+            </div>
+            <a class="course-information-official" href="https://www.dgt.es/nuestros-servicios/permisos-de-conducir/tus-puntos-y-tus-permisos/recupera-tus-puntos/" target="_blank" rel="noopener noreferrer">Más información oficial en la DGT <span aria-hidden="true">→</span></a>
+          </div>
+        </li>
+        <li class="course-information-item">
+          <button class="course-information-trigger" type="button" aria-expanded="false" aria-controls="official-regulations-content">
+            Normativa oficial <span class="course-link-note">DGT · BOE</span><span class="course-information-toggle" aria-hidden="true">+</span>
+          </button>
+          <div class="course-information-content" id="official-regulations-content" hidden>
+            <p class="course-information-lead">Los cursos de sensibilización y reeducación vial están regulados oficialmente y su contenido, duración y requisitos se ajustan a la normativa vigente.</p>
+            <p>La información de esta página está presentada de forma resumida para ayudarte a identificar fácilmente el curso que necesitas.</p>
+            <div class="course-information-actions">
+              <a class="cta-button" href="https://puntosnavarra.com/">PRÓXIMOS CURSOS</a>
+              <a class="cta-button course-information-whatsapp" href="https://wa.me/34649230920">CONSULTAR POR WHATSAPP</a>
+            </div>
+            <a class="course-information-official" href="https://www.dgt.es/nuestros-servicios/permisos-de-conducir/tus-puntos-y-tus-permisos/recupera-tus-puntos/" target="_blank" rel="noopener noreferrer">Información oficial en la DGT <span aria-hidden="true">→</span></a>
+            <a class="course-information-official" href="https://www.boe.es/eli/es/o/2024/09/02/int914/con" target="_blank" rel="noopener noreferrer">Consultar normativa en el BOE <span aria-hidden="true">→</span></a>
+          </div>
+        </li>
       </ul>
     </nav>
   </section>
@@ -99,6 +203,20 @@ document.querySelectorAll('.info-card-trigger').forEach((trigger) => {
     trigger.setAttribute('aria-expanded', String(!isExpanded))
     content.setAttribute('aria-hidden', String(isExpanded))
     card.classList.toggle('is-open', !isExpanded)
+    toggle.textContent = isExpanded ? '+' : '−'
+  })
+})
+
+document.querySelectorAll('.course-information-trigger').forEach((trigger) => {
+  const content = document.getElementById(trigger.getAttribute('aria-controls'))
+  const toggle = trigger.querySelector('.course-information-toggle')
+
+  trigger.addEventListener('click', () => {
+    const isExpanded = trigger.getAttribute('aria-expanded') === 'true'
+
+    trigger.setAttribute('aria-expanded', String(!isExpanded))
+    content.hidden = isExpanded
+    trigger.closest('.course-information-item').classList.toggle('is-open', !isExpanded)
     toggle.textContent = isExpanded ? '+' : '−'
   })
 })
