@@ -13,7 +13,7 @@ document.querySelector('#app').innerHTML = `
   <section class="hero container">
     <div class="hero-content">
       <h1>Recupera tus puntos.<br>Recupera tu permiso.</h1>
-      <p class="hero-subtitle">Cursos de recuperación de puntos y del permiso de conducir en Pamplona y comarca.</p>
+      <p class="hero-subtitle">Cursos para recuperar puntos o el permiso de conducir en Pamplona y comarca.</p>
       <a class="cta-button" href="https://puntosnavarra.com/">PRÓXIMOS CURSOS</a>
     </div>
     <div class="hero-illustration">
@@ -23,39 +23,40 @@ document.querySelector('#app').innerHTML = `
 
   <section class="quick-cards container" aria-label="Información rápida">
     <div class="info-card">
-      <button class="info-card-trigger" type="button" aria-expanded="false" aria-controls="when-content">
-        <span class="info-card-toggle" aria-hidden="true">+</span>
-        <h2>¿CUÁNDO?</h2>
-      </button>
-      <div class="info-card-content" id="when-content" aria-hidden="true">
-        <p>CURSOS SEMANALES</p>
+      <span class="info-card-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <path d="M6 2v4M18 2v4M3 9h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" />
+        </svg>
+      </span>
+      <h2>¿CUÁNDO?</h2>
+      <div class="info-card-content">
+        <p class="weekly-courses">CURSOS SEMANALES</p>
       </div>
     </div>
     <div class="info-card">
-      <button class="info-card-trigger" type="button" aria-expanded="false" aria-controls="how-much-content">
-        <span class="info-card-toggle" aria-hidden="true">+</span>
-        <h2>¿CUÁNTO?</h2>
-      </button>
-      <div class="info-card-content course-price-content" id="how-much-content" aria-hidden="true">
-        <div>
-          <p class="course-price-label">PARCIAL 10H</p>
-          <p class="course-price">215 €</p>
-        </div>
-        <div>
-          <p class="course-price-label">TOTAL 20H</p>
-          <p class="course-price">405 €</p>
-        </div>
+      <span class="info-card-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <circle cx="8" cy="8" r="5" />
+          <path d="M16 7a5 5 0 1 1-4.9 6M5 8h6M8 5v6M13 16h6M16 13v6" />
+        </svg>
+      </span>
+      <h2>¿CUÁNTO?</h2>
+      <div class="info-card-content course-price-content">
+        <p>PARCIAL · 10 H · <span class="course-price">215 €</span></p>
+        <p>TOTAL · 20 H · <span class="course-price">405 €</span></p>
       </div>
     </div>
     <div class="info-card">
-      <button class="info-card-trigger" type="button" aria-expanded="false" aria-controls="where-content">
-        <span class="info-card-toggle" aria-hidden="true">+</span>
-        <h2>¿DÓNDE?</h2>
-      </button>
-      <div class="info-card-content location-content" id="where-content" aria-hidden="true">
-        <p class="location-name">Autoescuela Barañain</p>
+      <span class="info-card-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+          <circle cx="12" cy="10" r="2.5" />
+        </svg>
+      </span>
+      <h2>¿DÓNDE?</h2>
+      <div class="info-card-content location-content">
+        <p class="location-name">C/ Pedro Bidagor, 7</p>
         <address>
-          C/ Pedro Bidagor, 7<br>
           31010 Barañáin
         </address>
       </div>
@@ -134,24 +135,6 @@ document.querySelector('#app').innerHTML = `
           </div>
         </li>
         <li class="course-information-item">
-          <button class="course-information-trigger" type="button" aria-expanded="false" aria-controls="course-duration-content">
-            Duración y contenido de los cursos <span class="course-link-note">PARCIAL 10 H · TOTAL 20 H</span><span class="course-information-toggle" aria-hidden="true">+</span>
-          </button>
-          <div class="course-information-content" id="course-duration-content" hidden>
-            <p class="course-information-lead">Los cursos combinan formación común sobre seguridad vial con contenidos adaptados a cada conductor.</p>
-            <dl class="course-information-details">
-              <div><dt>Recuperación parcial:</dt><dd>10 horas</dd></div>
-              <div><dt>Recuperación del permiso:</dt><dd>20 horas</dd></div>
-            </dl>
-            <p>La formación incluye contenidos sobre seguridad vial, conducción responsable y sensibilización para prevenir nuevas pérdidas de puntos.</p>
-            <div class="course-information-actions">
-              <a class="cta-button" href="https://puntosnavarra.com/">PRÓXIMOS CURSOS</a>
-              <a class="cta-button course-information-whatsapp" href="https://wa.me/34649230920">CONSULTAR POR WHATSAPP</a>
-            </div>
-            <a class="course-information-official" href="https://www.boe.es/eli/es/o/2024/09/02/int914/con" target="_blank" rel="noopener noreferrer">Consultar normativa oficial en el BOE <span aria-hidden="true">→</span></a>
-          </div>
-        </li>
-        <li class="course-information-item">
           <button class="course-information-trigger" type="button" aria-expanded="false" aria-controls="exams-content">
             Exámenes y pruebas <span class="course-link-note">Gestiona el CENTRO</span><span class="course-information-toggle" aria-hidden="true">+</span>
           </button>
@@ -191,21 +174,6 @@ document.querySelector('#app').innerHTML = `
   </section>
 </main>
 `
-
-document.querySelectorAll('.info-card-trigger').forEach((trigger) => {
-  const card = trigger.closest('.info-card')
-  const content = document.getElementById(trigger.getAttribute('aria-controls'))
-  const toggle = trigger.querySelector('.info-card-toggle')
-
-  trigger.addEventListener('click', () => {
-    const isExpanded = trigger.getAttribute('aria-expanded') === 'true'
-
-    trigger.setAttribute('aria-expanded', String(!isExpanded))
-    content.setAttribute('aria-hidden', String(isExpanded))
-    card.classList.toggle('is-open', !isExpanded)
-    toggle.textContent = isExpanded ? '+' : '−'
-  })
-})
 
 document.querySelectorAll('.course-information-trigger').forEach((trigger) => {
   const content = document.getElementById(trigger.getAttribute('aria-controls'))
