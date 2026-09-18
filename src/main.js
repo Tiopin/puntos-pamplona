@@ -4,8 +4,12 @@ import heroIllustration from './assets/hero-license.png'
 document.querySelector('#app').innerHTML = `
 <header class="site-header">
   <div class="container">
-    <p class="logo">PUNTOS PAMPLONA<span class="logo-complement">Y COMARCA</span></p>
-    <p class="tagline">Recuperación de puntos y del permiso</p>
+    <div class="site-header__content">
+      <p class="site-header__badge">CENTRO OFICIAL DGT · 310014</p>
+      <h1>Recuperación de Puntos en <span>Pamplona y comarca</span></h1>
+      <p>Cursos para recuperar tus puntos o tu permiso de conducir</p>
+    </div>
+    <a class="site-header__phone" href="tel:649230920">649 230 920</a>
   </div>
 </header>
 

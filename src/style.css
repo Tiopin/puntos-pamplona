@@ -1,11 +1,12 @@
 :root {
-  --navy: #0a1f44;
-  --blue: #1554f5;
-  --blue-light: #eaf0ff;
+  --navy: #151515;
+  --blue: #e2b62d;
+  --gold-dark: #c99c18;
+  --blue-light: #f8f8f6;
   --bg: #ffffff;
-  --text: #1c1f2a;
-  --muted: #5b6472;
-  --border: #e5e4e7;
+  --text: #151515;
+  --muted: #151515;
+  --border: #e5e5e2;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
 
@@ -50,32 +51,109 @@ img {
 
 /* Cabecera */
 .site-header {
-  padding: 28px 0;
+  padding: 32px 0;
+  color: #ffffff;
+  background: #151515;
+  border-bottom: 1px solid #2f2f2f;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 22px;
   text-align: center;
-  border-bottom: 1px solid var(--border);
 }
 
-.logo {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  color: var(--navy);
+.site-header__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 900px;
 }
 
-.logo-complement {
-  display: block;
-  margin-top: 2px;
+.site-header__badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  margin: 0 0 16px;
+  padding: 0 12px;
+  border-radius: 999px;
+  color: #151515;
+  background: #e2b62d;
   font-size: 11px;
-  line-height: 1.2;
-  font-weight: 700;
-  letter-spacing: 1.2px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  line-height: 1;
 }
 
-.tagline {
-  margin: 6px 0 0;
+.site-header__content h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.site-header__content h1 span {
+  color: #e2b62d;
+}
+
+.site-header__content p {
+  margin: 10px 0 0;
+  color: #f8f8f6;
   font-size: 14px;
-  color: var(--muted);
+}
+
+.site-header__phone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid #e2b62d;
+  border-radius: 999px;
+  color: #151515;
+  background: #e2b62d;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-header__phone:hover,
+.site-header__phone:focus-visible {
+  color: #ffffff;
+  background: #c99c18;
+  border-color: #c99c18;
+}
+
+.site-header__phone:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .site-header__content h1 {
+    font-size: 34px;
+  }
+
+  .site-header__content p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header {
+    padding: 28px 0;
+  }
+
+  .site-header__content h1 {
+    font-size: 28px;
+  }
 }
 
 /* Hero */
@@ -114,20 +192,22 @@ img {
 .cta-button {
   display: inline-block;
   background: var(--blue);
-  color: #fff;
+  color: var(--text);
   font-weight: 700;
   font-size: 15px;
   letter-spacing: 0.5px;
   padding: 16px 36px;
   border-radius: 999px;
   text-decoration: none;
-  box-shadow: 0 12px 24px rgba(21, 84, 245, 0.25);
+  box-shadow: 0 12px 24px rgba(21, 21, 21, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .cta-button:hover {
+  color: var(--bg);
+  background: var(--gold-dark);
   transform: translateY(-2px);
-  box-shadow: 0 16px 28px rgba(21, 84, 245, 0.32);
+  box-shadow: 0 16px 28px rgba(21, 21, 21, 0.16);
 }
 
 .hero-illustration img {
@@ -143,7 +223,10 @@ img {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
-  padding-bottom: 56px;
+  max-width: none;
+  padding-inline: max(20px, calc((100% - 1100px) / 2 + 20px));
+  padding-block: 40px;
+  background: #151515;
 }
 
 .info-card {
@@ -152,11 +235,12 @@ img {
   flex-direction: column;
   align-items: center;
   height: 164px;
-  background: var(--blue-light);
-  border: 1px solid rgba(10, 31, 68, 0.08);
+  background: #fcf8ea;
+  border: 1px solid rgba(201, 156, 24, 0.22);
   border-radius: 16px;
   padding: 14px 18px;
   text-align: center;
+  box-shadow: 0 6px 16px rgba(21, 21, 21, 0.05);
 }
 
 .info-card-icon {
@@ -165,10 +249,10 @@ img {
   width: 34px;
   height: 34px;
   margin-bottom: 7px;
-  border: 1px solid rgba(21, 84, 245, 0.12);
+  border: 1px solid var(--border);
   border-radius: 50%;
-  color: var(--blue);
-  background: #fff;
+  color: var(--gold-dark);
+  background: var(--bg);
 }
 
 .info-card-icon svg {
@@ -201,7 +285,7 @@ img {
 }
 
 .info-card-content .weekly-courses {
-  color: var(--blue);
+  color: var(--gold-dark);
   font-size: 17px;
   font-weight: 800;
 }
@@ -219,14 +303,14 @@ img {
 }
 
 .course-price-content .course-price {
-  color: var(--blue);
+  color: var(--gold-dark);
   font-size: 16px;
   font-weight: 800;
 }
 
 .info-card-content .location-name {
   margin: 0;
-  color: var(--blue);
+  color: var(--gold-dark);
   font-weight: 800;
 }
 
@@ -264,7 +348,7 @@ img {
   justify-content: space-between;
   gap: 16px;
   padding: 12px 18px;
-  border: 1px solid rgba(10, 31, 68, 0.08);
+  border: 1px solid var(--border);
   border-radius: 12px;
   color: var(--navy);
   background: var(--blue-light);
@@ -279,7 +363,7 @@ img {
   gap: 16px;
   width: 100%;
   padding: 12px 18px;
-  border: 1px solid rgba(10, 31, 68, 0.08);
+  border: 1px solid var(--border);
   border-radius: 12px;
   color: var(--navy);
   background: var(--blue-light);
@@ -326,12 +410,12 @@ img {
 }
 
 .course-information-links a:focus-visible {
-  outline: 2px solid var(--blue);
+  outline: 2px solid var(--gold-dark);
   outline-offset: 2px;
 }
 
 .course-information-trigger:focus-visible {
-  outline: 2px solid var(--blue);
+  outline: 2px solid var(--gold-dark);
   outline-offset: 2px;
 }
 
@@ -341,11 +425,11 @@ img {
 
 .course-information-content {
   padding: 24px 18px;
-  border: 1px solid rgba(10, 31, 68, 0.08);
+  border: 1px solid var(--border);
   border-top: 0;
   border-radius: 0 0 12px 12px;
   color: var(--text);
-  background: #f7f9ff;
+  background: var(--blue-light);
 }
 
 .course-information-content[hidden] {
@@ -398,14 +482,14 @@ img {
 }
 
 .course-information-actions .cta-button:first-child {
-  color: #fff;
+  color: var(--text);
   background: var(--blue);
 }
 
 .course-information-whatsapp {
-  color: var(--blue);
-  background: #fff;
-  box-shadow: inset 0 0 0 1px var(--blue);
+  color: var(--text);
+  background: var(--bg);
+  box-shadow: inset 0 0 0 1px var(--gold-dark);
 }
 
 .course-information-official {
@@ -434,7 +518,7 @@ img {
 }
 
 .contact-link:focus-visible {
-  outline: 2px solid var(--blue);
+  outline: 2px solid var(--gold-dark);
   outline-offset: 4px;
 }
 
